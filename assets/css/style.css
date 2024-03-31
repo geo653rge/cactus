@@ -159,30 +159,44 @@ button {
   align-items: center;
 }
 
-.nav__logo,
-.nav__close,
-.nav__toggle,
-.nav__actions {
+.nav-logo,
+.nav-close,
+.nav-toggle,
+.nav-actions {
   display: flex;
   color: var(--title-color);
   cursor: pointer;
 }
-.nav__logo {
+.nav-logo {
   font-weight: var(--font-semi-bold);
   column-gap: 0.25rem;
   align-items: center;
 }
-.nav__logo i {
-  color: var(--first-color) ;
+.nav-logo i {
+  color: var(--first-color);
   font-size: 1.25rem;
   font-weight: initial;
 }
-.nav__actions{
-font-size: 1.25rem;
-column-gap: 5rem;
-align-items: center;
+.nav-actions {
+  font-size: 1.25rem;
+  column-gap: 5rem;
+  align-items: center;
 }
 
+@media screen and (max-width: 1150px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    background-color: hsla(228, 24%, 6%, .2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    right: 0;
+    width:80%;
+    height: 100%;
+    padding: 6rem 3rem 0;
+    transition: right .4s;
+  }
+}
 /* Change background header */
 
 /* Active link */
