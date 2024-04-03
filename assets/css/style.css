@@ -190,7 +190,7 @@ button {
     background-color: hsla(228, 24%, 6%, 0.2);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    right: 0;
+    right: -100%;
     width: 80%;
     height: 100%;
     padding: 6rem 3rem 0;
@@ -213,6 +213,19 @@ button {
 .nav-link {
   color: var(--first-color);
 }
+
+.nav-close {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.15rem;
+  font-size: 1.25rem;
+}
+
+/* Show menu*/
+.show-menu {
+  right: 0;
+}
+
 /* Change background header */
 
 /* Active link */
