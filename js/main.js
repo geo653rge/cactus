@@ -10,7 +10,7 @@
 //   });
 // }
 // if (navClose) {
-//   navClose.addEventListener("click", () => {
+//   git navClose.addEventListener("click", () => {
 //     navMenu.classList.remove("show-menu");
 //   });
 // }
