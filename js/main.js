@@ -1,16 +1,28 @@
-// const navMenu = document.getElementById("nav-menu"),
-//   navToggle = document.getElementById("nav-toggle"),
-//   navClose = document.getElementById("nav-close");
+// script.js
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
 
-// /*Menu show */
+/* Menu show */
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
 
-// if (navToggle) {
-//   navToggle.addEventListener("click", () => {
-//     navMenu.classList.add("show-menu");
-//   });
-// }
-// if (navClose) {
-//   git navClose.addEventListener("click", () => {
-//     navMenu.classList.remove("show-menu");
-//   });
-// }
+/* Menu hidden */
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
+// REMOVE MENU MOBILE
+
+const navLink = document.querySelectorAll('.nav__link')
+
+const linkAction = () =>{
+    const navMenu = document.getElementById('nav-menu')
+// when each of the item on the nav__link is clicked , the show-menu closes.
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n =>n.addEventListener('click',linkAction))
