@@ -451,50 +451,77 @@ img {
   font-size: 1.5rem;
   font-weight: initial;
 }
-.footer__content{
+.footer__content {
   grid-template-columns: repeat(2, max-content);
   gap: 4rem 3rem;
 }
 
-.footer__title{
-font-size: var(--normal-font-size);
-margin-bottom: 1rem;
+.footer__title {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
 }
-.footer__links{
-display: grid;
-row-gap: .75rem;
+.footer__links {
+  display: grid;
+  row-gap: 0.75rem;
 }
-.footer__link{
+.footer__link {
   color: var(--text-color);
-  transition: color .4s;
+  transition: color 0.4s;
 }
-.footer__social{
-display: flex;
-column-gap: .75rem;
-
+.footer__social {
+  display: flex;
+  column-gap: 0.75rem;
 }
-.footer__social-link{
+.footer__social-link {
   color: var(--text-color);
   font-size: 1.5rem;
-  transition: color .4s;
+  transition: color 0.4s;
 }
 .footer__link:hover,
-.footer__social-link:hover{
+.footer__social-link:hover {
   color: var(--first-color);
 }
 
-.footer__copy{
+.footer__copy {
   display: block;
   margin-top: 6rem;
   text-align: center;
-  font-size: var(--small-font-size) ;
+  font-size: var(--small-font-size);
 }
 
 /*=============== SCROLL BAR ===============*/
-
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(228, 4%, 15%);
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(228, 4%, 25%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(228, 4%, 36%);
+}
 /*=============== SCROLL UP ===============*/
-
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom:-50%;
+  background-color: var(--container-color);
+  color: var(--title-color);
+  box-shadow: 0 12px 24px hsla(228, 48%, 4%, 0.5);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  z-index: var(--z-tooltip);
+  transition: bottom 0.4s, transform 0.4s;
+}
+.scrollup:hover{
+  transform: translateY(-0.5rem);
+}
 /* Show Scroll Up */
+.show-scroll{
+  bottom: 3rem;
+}
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
